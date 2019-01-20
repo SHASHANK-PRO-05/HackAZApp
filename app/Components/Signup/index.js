@@ -115,7 +115,7 @@ class Signup extends Component {
                             </View>
 
                             <TouchableRipple
-                                onPress={() => console.log('Pressed')}
+                                onPress={() => this.props.navigation.navigate('signin')}
                                 rippleColor="rgba(0, 0, 0, .32)"
                                 style={styles.signin}>
                                 <Text style={{textAlign: 'center'}}>Already have an account? Sign In</Text>

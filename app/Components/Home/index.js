@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {BottomNavigation, Text} from 'react-native-paper';
 import EventLookup from '../EventLookup/'
-
-
+import EventSignup from '../EventSignup'
+import PastEvents from '../PastEvents'
 
 const AlbumsRoute = () => <Text>Albums</Text>;
 
@@ -13,7 +13,8 @@ export default class MyComponent extends React.Component {
         index: 0,
         routes: [
             {key: 'eventLookup', title: 'Gym Workouts', icon: 'event-available'},
-            {key: 'createEvent', title: 'Host Workout', icon: 'event-seat'}
+            {key: 'createEvent', title: 'Host a Workout', icon: 'event-seat'},
+            {key: 'eventsAttend', title: 'Past Workouts', icon: 'person'}
         ],
     };
 
@@ -21,7 +22,8 @@ export default class MyComponent extends React.Component {
 
     _renderScene = BottomNavigation.SceneMap({
         'eventLookup': EventLookup,
-        'createEvent': EventLookup
+        'createEvent': EventSignup,
+        'eventsAttend': PastEvents
     });
 
     render() {
